@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CityView">
+        <attr name="android:textColor" />
+        <attr name="android:textSize" />
+        <attr name="title_color" format="color" />
+        <attr name="title_size" format="dimension" />
+        <attr name="title_background" format="color" />
+        <attr name="side_letter_color" format="color" />
+        <attr name="side_letter_size" format="color" />
+        <attr name="style" format="integer">
+            <enum name="linear" value="0" />
+            <enum name="grid" value="1" />
+        </attr>
+
+    </declare-styleable>
+</resources>

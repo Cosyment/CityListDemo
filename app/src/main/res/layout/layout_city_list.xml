@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools">
+
+
+    <data>
+
+        <variable
+            name="currentCity"
+            type="androidx.databinding.ObservableField&lt;com.android.citylistdemo.CityBean>" />
+
+        <variable
+            name="hotCities"
+            type="androidx.databinding.ObservableArrayList&lt;com.android.citylistdemo.CityBean>" />
+
+        <variable
+            name="cities"
+            type="androidx.databinding.ObservableArrayList&lt;com.android.citylistdemo.CityBean>" />
+
+        <import type="android.view.View" />
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            tools:listitem="@layout/item_grid_city"
+            tools:spanCount="3" />
+
+        <com.android.citylistdemo.citiesview.SideLetterBar
+            android:id="@+id/letterBar"
+            android:layout_width="15dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginBottom="30dp"
+            android:minWidth="15dp" />
+    </RelativeLayout>
+</layout>
